@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 
-class App extends React.Component(){
+class App extends React.Component{
   render(){
     return (
       <div>
