@@ -1,16 +1,15 @@
 import React from 'react';
 import './TrackList.css';
 
+
 class TrackList extends React.Component(){
   render(){
     return (
-      <div className="Track">
-        <div className="Track-information">
-          <h3>{/*track name will go here */}</h3>
-          <p>{/*track artist will go here*/} | {/* track album will go here */}</p>
-        </div>
-        <button className="Track-action">{/* + or - will go here */}</button>
+      <div className="TrackList">
+         {/*You will add a map method that renders a set of Track components*/}
       </div>
     );
   }
 }
+
+export default TrackList;
