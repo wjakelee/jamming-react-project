@@ -7,14 +7,17 @@ class SearchBar extends React.Component{
 
     this.state = { term: '' };
 
+    //bind methods to class
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
   }
   
+  //method passes search term state to search method in App.js
   search(){
     this.props.onSearch(this.state.term);
   }
 
+  //method sets the state of search term as it is inputed be the user
   handleTermChange(e){
     this.setState(
       { term: e.target.value }
