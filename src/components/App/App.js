@@ -39,6 +39,16 @@ class App extends React.Component{
     this.setState(
       { playlistTracks: tracks }
     )
+    
+    //removes added track from search results list
+    let results = this.state.searchResults;
+    results = results.filter(currentTrack => currentTrack.id !== track.id);
+    this.setState(
+      { searchResults: results }
+    )
+
+
+
   }
 
   /*method removes a track from the users playlist by using the 
@@ -50,6 +60,18 @@ class App extends React.Component{
     this.setState(
       { playlistTracks: tracks }
     )
+
+    //adds track that is removed from playlist back to the search results
+    let results = this.state.searchResults;
+    if (results.find(unsavedTrack => unsavedTrack.id === track.id)){
+      return;
+    }
+
+    results.unshift(track);
+    this.setState(
+      { SearchResults: results }
+    )
+
   }
 
   /*method updates the name of the playlist before submitting to Spotify */
