@@ -18,6 +18,11 @@
   color: rgba(265, 265, 265, .5);
 }
 
+.Preview-link {
+  color: rgba(256, 256, 256, 0.8);
+  font-weight: bold;
+}
+
 .Track-information {
   flex-grow: 1;
   display: flex;
